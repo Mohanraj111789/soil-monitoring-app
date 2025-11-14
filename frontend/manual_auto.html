@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual / Auto Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Switch Mode Control</h1>
+        <a href="index.html" class="btn">Back to Dashboard</a>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Current Mode</h2>
+            <p id="currentMode">--</p>
+        </div>
+
+        <div class="card">
+            <h2>Controls</h2>
+            <button class="btn" onclick="setMode('manual')">Set Manual</button>
+            <button class="btn" onclick="setMode('auto')">Set Auto</button>
+
+            <br><br>
+
+            <button class="btn" onclick="manualSwitch('on')">Turn ON (Manual)</button>
+            <button class="btn" onclick="manualSwitch('off')">Turn OFF (Manual)</button>
+        </div>
+
+    </div>
+
+    <script src="js/api.js"></script>
+
+    <script>
+        // Load mode on page start
+        getMode().then(data => {
+            document.getElementById("currentMode").innerText = data.mode;
+        });
+
+        function setMode(mode) {
+            updateMode(mode).then(resp => {
+                alert("Mode updated to " + mode);
+                location.reload();
+            });
+        }
+
+        function manualSwitch(state) {
+            updateManualState(state).then(resp => {
+                alert("Device turned " + state);
+            });
+        }
+    </script>
+
+</body>
+</html>

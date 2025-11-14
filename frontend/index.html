@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soil Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Soil Monitoring Dashboard</h1>
+        <a href="manual_auto.html" class="btn">Switch Control</a>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Soil Moisture</h2>
+            <p id="moistureValue">--</p>
+        </div>
+
+        <div class="card">
+            <h2>Humidity</h2>
+            <p id="humidityValue">--</p>
+        </div>
+        <div class="card">
+            <h2>Temperature</h2>
+            <p id="temperatureValue">--</p>
+        </div>
+
+        <div class="card">
+            <h2>LDR Value</h2>
+            <p id="ldrValue">--</p>
+        </div>
+
+        <div class="card">
+            <h2>Water Indication</h2>
+            <p id="waterStatus">--</p>
+        </div>
+
+        <div class="card">
+            <h2>Mode</h2>
+            <p id="modeStatus">--</p>
+        </div>
+
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
