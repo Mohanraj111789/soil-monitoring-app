@@ -11,3 +11,10 @@ class Mode(BaseModel):
 
 class ManualSwitch(BaseModel):
     state: str
+
+class Temperature(BaseModel):
+    temperature: int
+
+class LDR(BaseModel):
+    ldr: int
+

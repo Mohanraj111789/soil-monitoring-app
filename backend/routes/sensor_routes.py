@@ -4,6 +4,7 @@ from services.sensor_service import (
     get_dummy_humidity,
     get_dummy_ldr,
     get_dummy_water_status,
+    get_dummy_temperature,
     get_mode,
     set_mode,
     manual_switch
@@ -23,6 +24,9 @@ def moisture():
 def humidity():
     return {"value": get_dummy_humidity()}
 
+@router.get("/sensor/temperature")
+def temperature():
+    return {"value": get_dummy_temperature()}
 
 @router.get("/sensor/ldr")
 def ldr():

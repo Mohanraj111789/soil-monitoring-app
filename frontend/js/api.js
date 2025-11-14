@@ -21,6 +21,14 @@ async function getMode() {
     return fetch(`${API_BASE}/switch/mode`).then(res => res.json());
 }
 
+async function getTemperature() {
+    return fetch(`${API_BASE}/sensor/temperature`).then(res => res.json());
+}
+
+async function getLDR() {
+    return fetch(`${API_BASE}/sensor/ldr`).then(res => res.json());
+}
+
 // ----- UPDATE MODE -----
 async function updateMode(mode) {
     return fetch(`${API_BASE}/switch/mode/${mode}`, {

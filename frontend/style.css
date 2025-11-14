@@ -6,8 +6,8 @@
 :root {
     --bg: #f4f7ff;
     --card-bg: #ffffff;
-    --primary: #5a67d8;
-    --primary-dark: #434aa5;
+    --primary: #4fd44a;
+    --primary-dark: #30d60f;
     --text-dark: #1a1a1d;
     --text-light: #6b7280;
     --shadow: rgba(0, 0, 0, 0.08);
@@ -88,8 +88,8 @@ header h1 {
 
 .card h2 {
     font-size: 1.3rem;
-    margin-bottom: 15px;
     color: var(--primary);
+    padding: 50px;
 }
 
 .card p {
@@ -118,3 +118,18 @@ header h1 {
         font-size: 1.8rem;
     }
 }
+
+.card1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);   /* 5 columns per row */
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* GRID LAYOUT FOR PLANTS PAGE */
+

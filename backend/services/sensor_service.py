@@ -20,6 +20,10 @@ def get_dummy_water_status():
     """Return dummy water presence True/False"""
     return random.choice([True, False])
 
+def get_dummy_temperature():
+    """Return random temperature value"""
+    return random.randint(20, 40)
+
 
 # ---------------- Switch Logic ------------------
 
